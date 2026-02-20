@@ -28,6 +28,3 @@ for y in l3:
 l4=[x for x in range(2,101) if all([x%y for y in range(2,x)])==True]
 print(l4)
 #8
-a=int(input())
-b=[y for y in input()]
-c=[z for z in input()]
