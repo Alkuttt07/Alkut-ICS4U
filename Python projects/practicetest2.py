@@ -44,3 +44,23 @@ cuboid: area is {l2[3][1]} and volume is {l2[3][0]}
 main()
 
 #3
+with open("practicetest2text.txt") as tx1:
+    ll1="".join(tx1.readlines())
+ll2=[ll1[x] for x in range(len(ll1)) if x%2==0]
+ll1=[z for z in ll1]
+with open("practicetest2text.txt","w") as tx2:
+    for y in range(len(ll1)):
+        if y%2==0:
+            ll1[y]="a"
+    tx2.write(f"{"".join(ll1)} \n {"".join(ll2)}")
+with open("practicetest2text.txt") as tx3:
+    print(tx3.readlines())
+
+for a in range(len(ll2)):
+    ll1[a*2]=ll2[a]
+
+with open("practicetest2text.txt","w") as tx4:
+    tx4.write("".join(ll1))
+
+with open("practicetest2text.txt") as tx5:
+    print(tx5.readlines())
