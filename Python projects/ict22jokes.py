@@ -1,0 +1,4 @@
+jokes=["How do you throw a space party? You planet.","What’s Forest Gump’s password? 1Forest1.","How do poets say hello? Hey, haven’t we metaphor?","How does a rabbi make his coffee? Hebrews it.","Why did the M&M go to school? It wanted to be a Smartie.",'I try not to tell dad jokes … But when I do, he thinks they’re funny.',"I told my wife she was drawing her eyebrows too high. She looked at me surprised.","I poured root beer in a square glass. Now I just have beer.","Why aren’t koalas actual bears? They don’t meet the koalafications."," RIP to boiling water. You will be mist."]
+import random
+def f1():
+    print(jokes[random.randint(0,9)])
