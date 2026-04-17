@@ -6,9 +6,13 @@ def loadkeyboard():
         x=customizetx1.readline().split("%")
         for y in range(len(x)):
             currentkeyboard[y]=x[y]
-def changekeyboard(a1):
-    a1#inputting wnated button
-    currentkeyboard[a1]#equals to inputted buttom
+def changekeyboard():
+    while True:
+        for event in pygame.event.get():  
+            if event.type==pygame.KEYDOWN:
+                keynumber=event.key
+                return pygame.key.name(keynumber)
+
 
 def applykeyboard():
     with open("control.txt","w") as customizetx2:
