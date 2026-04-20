@@ -1,1 +1,0 @@
-v%up%c%left%s%down%a%right
