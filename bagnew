@@ -1,0 +1,8 @@
+                temp_surface = pygame.Surface((rect.width, rect.height), pygame.SRCALPHA)
+                pygame.draw.rect(
+                    temp_surface,
+                    (*GRID_COLOR, 80),
+                    (0, 0, rect.width, rect.height))
+                screen.blit(temp_surface, rect.topleft)
+
+              
