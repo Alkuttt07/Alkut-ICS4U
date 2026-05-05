@@ -7,3 +7,29 @@
 
               
 line140
+
+
+def save_inventory():
+    with open("save.txt", "w") as file:
+        for item in inventory.items:
+            weapon = item.item
+            file.write(f"{item.grid_x}%{item.grid_y}%{item.width}%{item.height}%{weapon.level}%{weapon.damage}%{weapon.durability}\n")
+
+def load_inventory():
+    global inventory
+    inventory = Inventory()
+    with open("save.txt", "r") as file:
+        for line in file:
+            data = line.split("%")
+            grid_x = int(data[0])
+            grid_y = int(data[1])
+            width = int(data[2])
+            height = int(data[3])
+            level = int(data[4])
+            damage = int(data[5])
+            durability = int(data[6])
+            weapon = Weapon(level,durability,damage,1.0,0.8,100,None)
+            item = InventoryItem(weapon,width,height)
+            item.grid_x = grid_x
+            item.grid_y = grid_y
+            inventory.items.append(item)
