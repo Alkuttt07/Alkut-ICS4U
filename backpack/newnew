@@ -1,0 +1,125 @@
+new
+
+# ########################################################
+# ################## 选中物品系统 #########################
+# ########################################################
+
+selected_item = None
+
+def interact_action():
+
+    if selected_item:
+        print("INTERACT WITH:", selected_item.item.name)
+
+def discard_action():
+
+    global selected_item
+
+    if selected_item:
+
+        if selected_item in inventory.items:
+            inventory.items.remove(selected_item)
+
+        selected_item = None
+在example后面 sort前面
+
+
+# ########################################################
+# ################## 新增按钮 #############################
+# ########################################################
+
+interact_button = Interactive_Button(
+    pos=(900, 420),
+    size=(180, 60),
+
+    image=make_button_surface((80, 80, 80),"INTERACT"),
+
+    lit_image=make_button_surface((120, 120, 200),"INTERACT"),
+
+    dark_image=make_button_surface((50, 50, 150),"INTERACT"),
+
+    type="interact",
+    action=interact_action
+)
+
+discard_button = Interactive_Button(
+    pos=(900, 520),
+    size=(180, 60),
+
+    image=make_button_surface((120, 50, 50),"DISCARD"),
+
+    lit_image=make_button_surface((180, 70, 70),"DISCARD"),
+
+    dark_image=make_button_surface((90, 30, 30),"DISCARD"),
+
+    type="discard",
+    action=discard_action
+)
+
+upgrade按钮 后面
+
+
+    # ########################################################
+    # ################## 选中高亮 ############################
+    # ########################################################
+
+    if selected_item and selected_item in inventory.items:
+
+        pygame.draw.rect(
+            screen,
+            (255,255,0),
+            selected_item.get_rect(),
+            4
+        )
+
+while里面 draw后面 forevent 前面
+
+
+         # ########################################################
+                # ################## 点击选中 #############################
+                # ########################################################
+
+                clicked_item = False
+
+                for item in reversed(inventory.items):
+
+                    if item.get_rect().collidepoint(mouse_x, mouse_y):
+
+                        selected_item = item
+
+                        clicked_item = True
+
+                        dragging_item = item
+
+                        offset_x = mouse_x - item.get_rect().x
+                        offset_y = mouse_y - item.get_rect().y
+
+                        inventory.items.remove(item)
+
+                        break
+
+                if not clicked_item:
+                    selected_item = None
+
+mouse button down里面的最下面
+
+   # ########################################################
+    # ################## 右边物品UI ##########################
+    # ########################################################
+
+    if selected_item:
+
+        interact_button.detect_hover(screen, (mouse_x, mouse_y))
+
+        discard_button.detect_hover(screen, (mouse_x, mouse_y))
+
+        font = pygame.font.SysFont(None, 28)
+
+        item_name = font.render(
+            selected_item.item.name,
+            True,
+            (255,255,255)
+        )
+
+        screen.blit(item_name, (900, 350))
+ ifdraggingitem上面
