@@ -1,0 +1,50 @@
+{
+    "activeFile": "stage2.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "BG.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Grey Wall.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tile.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "stage2.tmx": {
+            "scale": 0.25,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 1168,
+                "y": 686
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/bord3/repos/ics4u/Major_Project_2_Harry_Kong/week2",
+    "map.height": 32,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 50,
+    "map.tileWidth": 50,
+    "map.width": 48,
+    "openFiles": [
+        "stage2.tmx"
+    ],
+    "project": "stage2.tiled-project",
+    "recentFiles": [
+        "stage2.tmx",
+        "BG.tsx",
+        "Tile.tsx",
+        "Grey Wall.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 1600,
+        "width": 2400
+    }
+}
